@@ -1,186 +1,465 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ovandu Systems</title>
-<link rel="icon" type="image/png" href="ovanja.png">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-<style>
-  body {font-family: 'Poppins', sans-serif; margin:0; padding:0; scroll-behavior: smooth;}
-  header {background:#0F172A; color:white; padding:15px 40px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:100;}
-  header img {height:60px; max-width:200px;}
-  nav a {color:white; margin-left:20px; text-decoration:none; font-weight:600; transition:0.3s;}
-  nav a:hover {color:#22C55E;}
-  .hero {background: linear-gradient(135deg, #0F172A, #1E293B); color:white; padding:100px 20px; text-align:center;}
-  .hero h1 {font-size:3em; margin-bottom:20px;}
-  .hero p {font-size:1.2em; margin-bottom:30px;}
-  .hero button {background:#22C55E; color:#0F172A; padding:15px 30px; border:none; border-radius:8px; font-weight:bold; cursor:pointer; transition:0.3s;}
-  .hero button:hover {background:#16A34A;}
-  section {padding:60px 20px; text-align:center;}
-  h2 {margin-bottom:40px; color:#0F172A;}
-  .services, .portfolio {display:flex; justify-content:center; gap:40px; flex-wrap:wrap;}
-  .card {background:#f4f4f4; padding:25px; border-radius:12px; width:280px; transition:0.4s; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
-  .card:hover {transform: translateY(-10px) scale(1.03); box-shadow:0 8px 20px rgba(0,0,0,0.2);}
-  footer {background:#0F172A; color:white; padding:30px 20px; text-align:center;}
-  input, textarea, select {width:100%; padding:12px; margin:8px 0; border-radius:6px; border:1px solid #ccc; font-size:1em;}
-  button.submit {background:#22C55E; color:#0F172A; padding:12px 20px; border:none; border-radius:6px; font-weight:bold; cursor:pointer; transition:0.3s;}
-  button.submit:hover {background:#16A34A;}
-  
-  /* WhatsApp Chat Bot */
-  .whatsapp {position:fixed; bottom:20px; right:20px; width:60px; cursor:pointer; z-index:1000; transition:0.3s;}
-  .whatsapp:hover {transform: scale(1.1);}
 
-  /* Chatbot Box */
-  #chatbot {position:fixed; bottom:90px; right:20px; width:300px; max-width:90%; background:#f4f4f4; border-radius:10px; box-shadow:0 5px 20px rgba(0,0,0,0.3); display:flex; flex-direction:column; z-index:1000;}
-  #chatbot-header {background:#22C55E; color:#0F172A; padding:10px; border-radius:10px 10px 0 0; font-weight:bold; display:flex; justify-content:space-between; cursor:pointer;}
-  #chatbot-messages {padding:10px; height:250px; overflow-y:auto; font-size:0.9em;}
-  #chatbot-input {display:flex; border-top:1px solid #ccc;}
-  #chatbot-input input {flex:1; padding:10px; border:none;}
-  #chatbot-input button {background:#22C55E; color:#0F172A; border:none; padding:10px; cursor:pointer; font-weight:bold;}
+<title>Ovandu Systems | Tecnologia para Empresas</title>
+
+<meta name="description" content="Ovandu Systems desenvolve websites inteligentes, sistemas digitais e soluções tecnológicas para empresas.">
+
+<link rel="icon" type="image/png" href="ovanja.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f5f7fb;
+color:#333;
+scroll-behavior:smooth;
+}
+
+header{
+background:#0F172A;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+header img{
+height:55px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:600;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#22C55E;
+}
+
+.hero{
+background:linear-gradient(135deg,#0F172A,#1E293B);
+color:white;
+text-align:center;
+padding:120px 20px;
+}
+
+.hero h1{
+font-size:3em;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.2em;
+margin-bottom:30px;
+}
+
+.hero button{
+background:#22C55E;
+color:#0F172A;
+padding:15px 35px;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.hero button:hover{
+background:#16A34A;
+}
+
+section{
+padding:70px 20px;
+text-align:center;
+}
+
+h2{
+margin-bottom:40px;
+color:#0F172A;
+}
+
+.services{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:12px;
+width:260px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.stats{
+display:flex;
+justify-content:center;
+gap:50px;
+flex-wrap:wrap;
+}
+
+.stat{
+font-size:2em;
+font-weight:700;
+color:#22C55E;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+width:60px;
+z-index:999;
+cursor:pointer;
+transition:0.3s;
+}
+
+.whatsapp:hover{
+transform:scale(1.1);
+}
+
+#chatbot{
+position:fixed;
+bottom:100px;
+right:20px;
+width:320px;
+background:white;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.25);
+display:flex;
+flex-direction:column;
+z-index:999;
+}
+
+#chatbot-header{
+background:#22C55E;
+padding:10px;
+font-weight:bold;
+display:flex;
+justify-content:space-between;
+cursor:pointer;
+}
+
+#chatbot-messages{
+height:250px;
+overflow-y:auto;
+padding:10px;
+font-size:0.9em;
+}
+
+#chatbot-input{
+display:flex;
+border-top:1px solid #ddd;
+}
+
+#chatbot-input input{
+flex:1;
+padding:10px;
+border:none;
+}
+
+#chatbot-input button{
+background:#22C55E;
+border:none;
+padding:10px;
+cursor:pointer;
+}
+
+.quick-buttons button{
+margin:4px;
+padding:6px 10px;
+border:none;
+background:#22C55E;
+border-radius:6px;
+font-size:12px;
+cursor:pointer;
+}
+
+footer{
+background:#0F172A;
+color:white;
+padding:25px;
+text-align:center;
+}
+
 </style>
+
 </head>
+
 <body>
 
-<!-- Header -->
 <header>
-  <img src="ovanja.png" alt="Ovandu Systems">
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#services">Serviços</a>
-    <a href="#portfolio">Portfólio</a>
-    <a href="#pedido">Pedido</a>
-    <a href="#contact">Contato</a>
-  </nav>
+
+<img src="ovanja.png">
+
+<nav>
+
+<a href="#home">Home</a>
+<a href="#services">Serviços</a>
+<a href="#stats">Resultados</a>
+<a href="#contact">Contato</a>
+
+</nav>
+
 </header>
 
-<!-- Hero Section -->
 <section class="hero" id="home">
-  <h1>Ovandu Systems</h1>
-  <p>Tecnologia para o crescimento das empresas</p>
-  <button onclick="document.getElementById('pedido').scrollIntoView({behavior:'smooth'});">Solicitar Serviço</button>
+
+<h1>Ovandu Systems</h1>
+
+<p>Tecnologia Inteligente para o crescimento das empresas</p>
+
+<button onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
+Ver Serviços
+</button>
+
 </section>
 
-<!-- Services Section -->
 <section id="services">
-  <h2>Nossos Serviços</h2>
-  <div class="services">
-    <div class="card">
-      <h3>Websites Inteligentes</h3>
-      <p>Design profissional, integração WhatsApp, formulários inteligentes e mobile friendly.</p>
-    </div>
-    <div class="card">
-      <h3>Sistemas Digitais</h3>
-      <p>Automatização, gestão de clientes, reservas, vendas e relatórios em tempo real.</p>
-    </div>
-    <div class="card">
-      <h3>SaaS</h3>
-      <p>Soluções acessíveis com modelo de assinatura mensal, escaláveis para qualquer empresa.</p>
-    </div>
-  </div>
+
+<h2>Nossos Serviços</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Websites Inteligentes</h3>
+<p>Sites modernos, rápidos e otimizados para empresas.</p>
+</div>
+
+<div class="card">
+<h3>Sistemas Digitais</h3>
+<p>Automação empresarial e sistemas personalizados.</p>
+</div>
+
+<div class="card">
+<h3>SaaS</h3>
+<p>Plataformas online por assinatura para empresas.</p>
+</div>
+
+</div>
+
 </section>
 
-<!-- Portfolio Section -->
-<section id="portfolio">
-  <h2>Portfólio</h2>
-  <div class="portfolio">
-    <div class="card">Projeto 1 - Em desenvolvimento</div>
-    <div class="card">Projeto 2 - Em desenvolvimento</div>
-    <div class="card">Projeto 3 - Em desenvolvimento</div>
-  </div>
+<section id="stats">
+
+<h2>Nossos Resultados</h2>
+
+<div class="stats">
+
+<div>
+<div class="stat" id="clientes">0</div>
+Clientes
+</div>
+
+<div>
+<div class="stat" id="projetos">0</div>
+Projetos
+</div>
+
+<div>
+<div class="stat" id="experiencia">0</div>
+Anos
+</div>
+
+</div>
+
 </section>
 
-<!-- Pedido Section -->
-<section id="pedido">
-  <h2>Solicitar Serviço</h2>
-  <form id="pedidoForm">
-    <input type="text" placeholder="Nome" name="Nome" required>
-    <input type="text" placeholder="Empresa" name="Empresa">
-    <select name="Servico" required>
-      <option value="">Tipo de Serviço</option>
-      <option value="website">Website Inteligente</option>
-      <option value="sistema">Sistema Digital</option>
-      <option value="outro">Outro</option>
-    </select>
-    <textarea placeholder="Descreva seu pedido" rows="4" name="Descricao" required></textarea>
-    <input type="tel" placeholder="Telefone" name="Telefone" required>
-    <button class="submit" type="submit">Enviar Pedido</button>
-  </form>
-</section>
-
-<!-- Contact Section -->
 <section id="contact">
-  <h2>Contato</h2>
-  <p>Telefone / WhatsApp: <a href="https://wa.me/244925146189" target="_blank">+244 925 146 189</a></p>
-  <p>Email: avindodossantos@gmail.com</p>
+
+<h2>Contato</h2>
+
+<p>WhatsApp: +244 925 146 189</p>
+
+<p>Email: avindodossantos@gmail.com</p>
+
 </section>
 
-<!-- WhatsApp Chat Bot -->
-<a href="https://wa.me/244925146189?text=Ol%C3%A1,%20quero%20saber%20mais%20sobre%20a%20Ovandu%20Systems" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat WhatsApp" class="whatsapp">
+<a href="https://wa.me/244925146189" target="_blank">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="whatsapp">
+
 </a>
 
-<!-- Chatbot -->
 <div id="chatbot">
-  <div id="chatbot-header" onclick="toggleChat()">Chat Ovandu <span>X</span></div>
-  <div id="chatbot-messages">
-    <div>Olá! 👋 Posso te ajudar a entender nossos serviços.</div>
-  </div>
-  <div id="chatbot-input">
-    <input type="text" id="userMessage" placeholder="Digite sua mensagem">
-    <button onclick="sendMessage()">Enviar</button>
-  </div>
+
+<div id="chatbot-header" onclick="toggleChat()">
+
+Chat Ovandu
+
+<span>X</span>
+
+</div>
+
+<div id="chatbot-messages">
+
+<div>
+
+Olá 👋  
+Posso ajudar com:
+
+<div class="quick-buttons">
+
+<button onclick="quickMsg('serviços')">Serviços</button>
+
+<button onclick="quickMsg('preço')">Preço</button>
+
+<button onclick="quickMsg('portfolio')">Portfólio</button>
+
+<button onclick="quickMsg('whatsapp')">WhatsApp</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="chatbot-input">
+
+<input type="text" id="userMessage" placeholder="Digite sua mensagem">
+
+<button onclick="sendMessage()">Enviar</button>
+
+</div>
+
 </div>
 
 <script>
+
 function toggleChat(){
-  const chat = document.getElementById('chatbot');
-  chat.style.display = (chat.style.display==='flex')?'none':'flex';
+
+const chat=document.getElementById("chatbot");
+
+chat.style.display=(chat.style.display==="none")?"flex":"none";
+
+}
+
+function quickMsg(text){
+
+document.getElementById("userMessage").value=text;
+
+sendMessage();
+
+}
+
+const respostas={
+
+"serviços":"Oferecemos Websites Inteligentes, Sistemas Digitais e SaaS.",
+
+"preço":"O preço depende do tipo de projeto. Fale conosco no WhatsApp para orçamento.",
+
+"portfolio":"Nosso portfólio está em desenvolvimento.",
+
+"whatsapp":"Fale conosco aqui: https://wa.me/244925146189",
+
+"website":"Criamos websites profissionais para empresas.",
+
+"sistema":"Criamos sistemas digitais personalizados."
+
+};
+
+function getReply(msg){
+
+msg=msg.toLowerCase();
+
+for(let key in respostas){
+
+if(msg.includes(key))
+
+return respostas[key];
+
+}
+
+return "Posso ajudar com serviços, preço ou contato.";
+
 }
 
 function sendMessage(){
-  const input = document.getElementById('userMessage');
-  const msg = input.value.trim();
-  if(msg==='') return;
-  const messages = document.getElementById('chatbot-messages');
-  const userDiv = document.createElement('div');
-  userDiv.textContent = 'Você: '+msg;
-  userDiv.style.fontWeight='bold';
-  messages.appendChild(userDiv);
 
-  let botReply = '';
-  if(/como.*empresa|como.*funciona/i.test(msg)){
-    botReply = 'A Ovandu Systems desenvolve websites e sistemas digitais para empresas. Você pode solicitar um serviço ou ver nossos serviços acima!';
-  } else if(/quais.*serviços|o que.*oferecem/i.test(msg)){
-    botReply = 'Oferecemos Websites Inteligentes, Sistemas Digitais e soluções SaaS. Confira nossos serviços na seção "Nossos Serviços".';
-  } else if(/como.*pedir|solicitar/i.test(msg)){
-    botReply = 'Você pode solicitar um serviço clicando no botão "Solicitar Serviço" no topo ou na seção de pedido!';
-  } else if(/whatsapp|falar/i.test(msg)){
-    botReply = 'Clique no ícone verde para falar conosco pelo WhatsApp!';
-  } else if(/portfólio|projetos/i.test(msg)){
-    botReply = 'Nosso portfólio está disponível na seção "Portfólio".';
-  } else {
-    botReply = 'Posso te ajudar a solicitar um serviço, ver nossos serviços ou portfólio. 😉';
-  }
+const input=document.getElementById("userMessage");
 
-  const botDiv = document.createElement('div');
-  botDiv.textContent = 'Ovandu: '+botReply;
-  messages.appendChild(botDiv);
-  messages.scrollTop = messages.scrollHeight;
-  input.value='';
+const msg=input.value.trim();
+
+if(msg==="")return;
+
+const chat=document.getElementById("chatbot-messages");
+
+const user=document.createElement("div");
+
+user.textContent="Você: "+msg;
+
+chat.appendChild(user);
+
+const bot=document.createElement("div");
+
+bot.textContent="Ovandu: "+getReply(msg);
+
+chat.appendChild(bot);
+
+chat.scrollTop=chat.scrollHeight;
+
+input.value="";
+
 }
 
-// Feedback de envio de pedido
-document.getElementById('pedidoForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  alert('Obrigado! Seu pedido foi enviado com sucesso. Entraremos em contato em breve.');
-  this.reset();
-});
+function counter(id,target){
+
+let i=0;
+
+const interval=setInterval(()=>{
+
+i++;
+
+document.getElementById(id).innerText=i;
+
+if(i==target)clearInterval(interval);
+
+},30);
+
+}
+
+counter("clientes",25);
+
+counter("projetos",40);
+
+counter("experiencia",3);
+
 </script>
 
 <footer>
-  © 2026 Ovandu Systems. Todos os direitos reservados.
+
+© 2026 Ovandu Systems — Todos os direitos reservados
+
 </footer>
 
 </body>
+
 </html>

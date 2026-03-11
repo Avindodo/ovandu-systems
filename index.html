@@ -3,127 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ovandu Systems | Tecnologia para Empresas</title>
-<meta name="google-site-verification" content="mh8N_EUGnWaxPVy2lT_lT4G2RwEH8TTY1_BDZueyRT8" />
-<meta name="description" content="Ovandu Systems desenvolve websites inteligentes, sistemas digitais e soluções tecnológicas para empresas.">
-<link rel="icon" type="image/png" href="ovanja.png">
+<title>Painel Completo Ovandu Systems</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
 <style>
-body{font-family:'Poppins',sans-serif;background:#f5f7fb;color:#333;scroll-behavior:smooth;margin:0;padding:0;}
-header{background:#0F172A;color:white;display:flex;justify-content:space-between;align-items:center;padding:15px 40px;position:sticky;top:0;z-index:1000;}
-header img{height:55px;}
-nav a{color:white;text-decoration:none;margin-left:25px;font-weight:600;transition:0.3s;}
-nav a:hover{color:#22C55E;}
-.hero{background:linear-gradient(135deg,#0F172A,#1E293B);color:white;text-align:center;padding:120px 20px;}
-.hero h1{font-size:3em;margin-bottom:20px;}
-.hero p{font-size:1.2em;margin-bottom:30px;}
-.hero button{background:#22C55E;color:#0F172A;padding:15px 35px;border:none;border-radius:8px;font-size:16px;cursor:pointer;transition:0.3s;}
-.hero button:hover{background:#16A34A;}
-section{padding:70px 20px;text-align:center;}
-h2{margin-bottom:40px;color:#0F172A;}
-.services{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;}
-.card{background:white;padding:30px;border-radius:12px;width:260px;box-shadow:0 5px 20px rgba(0,0,0,0.08);transition:0.4s;}
-.card:hover{transform:translateY(-10px);}
-.stats{display:flex;justify-content:center;gap:50px;flex-wrap:wrap;}
-.stat{font-size:2em;font-weight:700;color:#22C55E;}
-.whatsapp{position:fixed;bottom:20px;right:20px;width:60px;z-index:999;cursor:pointer;transition:0.3s;}
-.whatsapp:hover{transform:scale(1.1);}
-#chatbot{position:fixed;bottom:100px;right:20px;width:320px;background:white;border-radius:10px;box-shadow:0 5px 20px rgba(0,0,0,0.25);display:flex;flex-direction:column;z-index:999;}
-#chatbot-header{background:#22C55E;padding:10px;font-weight:bold;display:flex;justify-content:space-between;cursor:pointer;color:white;}
-#chatbot-messages{height:250px;overflow-y:auto;padding:10px;font-size:0.9em;}
-#chatbot-input{display:flex;border-top:1px solid #ddd;}
-#chatbot-input input{flex:1;padding:10px;border:none;}
-#chatbot-input button{background:#22C55E;border:none;padding:10px;cursor:pointer;color:white;}
-.quick-buttons button{margin:4px;padding:6px 10px;border:none;background:#22C55E;border-radius:6px;font-size:12px;cursor:pointer;color:white;}
-footer{background:#0F172A;color:white;padding:25px;text-align:center;}
-/* Painel Administração */
-#painel{background:white;padding:20px;margin:50px auto;border-radius:12px;width:90%;max-width:1000px;box-shadow:0 5px 20px rgba(0,0,0,0.1);}
-#painel input,#painel select{padding:8px;margin:5px 0;border-radius:6px;border:1px solid #ccc;width:100%;}
-#painel button{margin-top:5px;}
-#tabelaSistemas{width:100%;border-collapse:collapse;margin-top:20px;}
-#tabelaSistemas th,#tabelaSistemas td{border:1px solid #ccc;padding:10px;text-align:left;}
-#tabelaSistemas th{background:#0F172A;color:white;}
+body{font-family:'Poppins',sans-serif;background:#f5f7fb;color:#333;padding:20px;scroll-behavior:smooth;}
+h1,h2{color:#0F172A;}
+table{width:100%;border-collapse:collapse;margin-top:20px;}
+th,td{border:1px solid #ccc;padding:10px;text-align:left;}
+th{background:#0F172A;color:white;}
+button{padding:6px 12px;border:none;border-radius:6px;background:#22C55E;color:white;cursor:pointer;}
+button:hover{background:#16A34A;}
+input, select{padding:8px;margin:5px 0;border-radius:6px;border:1px solid #ccc;}
+#formEntrega{margin-top:20px;background:white;padding:15px;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,0.08);}
 </style>
 </head>
 <body>
 
-<header>
-<img src="ovanja.png" alt="Ovandu Systems">
-<nav>
-<a href="#home">Home</a>
-<a href="#services">Serviços</a>
-<a href="#stats">Resultados</a>
-<a href="#contact">Contato</a>
-<a href="#painel">Painel Admin</a>
-</nav>
-</header>
+<h1>Painel de Administração</h1>
 
-<section class="hero" id="home">
-<h1>Ovandu Systems</h1>
-<p>Tecnologia Inteligente para o crescimento das empresas</p>
-<button onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">Ver Serviços</button>
-</section>
-
-<section id="services">
-<h2>Nossos Serviços</h2>
-<div class="services">
-<div class="card"><h3>Websites Inteligentes</h3><p>Sites modernos, rápidos e otimizados para empresas.</p></div>
-<div class="card"><h3>Sistemas Digitais</h3><p>Automação empresarial e sistemas personalizados.</p></div>
-<div class="card"><h3>SaaS</h3><p>Plataformas online por assinatura para empresas.</p></div>
-</div>
-</section>
-
-<section id="stats">
-<h2>Nossos Resultados</h2>
-<div class="stats">
-<div><div class="stat" id="clientes">0</div>Clientes</div>
-<div><div class="stat" id="projetos">0</div>Projetos</div>
-<div><div class="stat" id="experiencia">0</div>Anos</div>
-</div>
-</section>
-
-<section id="contact">
-<h2>Contato</h2>
-<p>WhatsApp: +244 925 146 189</p>
-<p>Email: avindodossantos@gmail.com</p>
-</section>
-
-<a href="https://wa.me/244925146189" target="_blank"><img src="ovanja.png" class="whatsapp" alt="WhatsApp"></a>
-
-<!-- Chatbot -->
-<div id="chatbot">
-<div id="chatbot-header" onclick="toggleChat()">Chat Ovandu <span>X</span></div>
-<div id="chatbot-messages"><div>Olá 👋 <br>Posso ajudar com:
-<div class="quick-buttons">
-<button onclick="quickMsg('serviços')">Serviços</button>
-<button onclick="quickMsg('preço')">Preço</button>
-<button onclick="quickMsg('portfolio')">Portfólio</button>
-<button onclick="quickMsg('whatsapp')">WhatsApp</button>
-</div></div></div>
-<div id="chatbot-input">
-<input type="text" id="userMessage" placeholder="Digite sua mensagem">
-<button onclick="sendMessage()">Enviar</button>
-</div>
-</div>
-
-<!-- Painel Admin -->
-<div id="painel">
-<h2>Painel de Administração</h2>
-<h3>Membros do Time</h3>
+<h2>Membros do Time</h2>
 <ul id="listaMembros"></ul>
 <input type="text" id="novoMembro" placeholder="Nome do Membro">
 <button onclick="adicionarMembro()">Adicionar Membro</button>
 
-<h3>Registrar Nova Entrega</h3>
-<input type="text" id="cliente" placeholder="Nome do Cliente" required>
-<input type="text" id="sistema" placeholder="Nome do Sistema" required>
-<input type="email" id="email" placeholder="Email do Cliente" required>
-<input type="file" id="arquivoSistema" required>
-<select id="membro"></select>
-<button onclick="registrarEntrega()">Registrar Entrega</button>
-
-<h3>Entregas de Sistemas</h3>
+<h2>Entregas de Sistemas</h2>
 <table id="tabelaSistemas">
 <thead>
 <tr>
@@ -131,6 +34,7 @@ footer{background:#0F172A;color:white;padding:25px;text-align:center;}
 <th>Sistema</th>
 <th>Arquivo</th>
 <th>Email</th>
+<th>Telefone</th>
 <th>Membro</th>
 <th>Status</th>
 <th>Ações</th>
@@ -138,115 +42,168 @@ footer{background:#0F172A;color:white;padding:25px;text-align:center;}
 </thead>
 <tbody></tbody>
 </table>
+
+<h2>Registrar Nova Entrega</h2>
+<div id="formEntrega">
+<input type="text" id="cliente" placeholder="Nome do Cliente" required>
+<input type="text" id="sistema" placeholder="Nome do Sistema" required>
+<input type="email" id="email" placeholder="Email do Cliente" required>
+<input type="text" id="telefone" placeholder="Telefone do Cliente" required>
+<select id="membro"></select>
+<input type="file" id="arquivoSistema" required>
+<button onclick="registrarEntrega()">Registrar Entrega</button>
 </div>
 
 <script>
-// ===== Estatísticas =====
-function counter(id,target){let i=0;const interval=setInterval(()=>{i++;document.getElementById(id).innerText=i;if(i==target) clearInterval(interval);},30);}
-counter("clientes",25);
-counter("projetos",40);
-counter("experiencia",3);
+const API_URL = "http://localhost:3000";
+const MEU_NUMERO = "244925146189";
+const MEU_EMAIL = "avindodossantos0@gmail.com";
 
-// ===== Chatbot =====
-function toggleChat(){const chat=document.getElementById("chatbot");chat.style.display=(chat.style.display==="none")?"flex":"none";}
-function quickMsg(text){document.getElementById("userMessage").value=text;sendMessage();}
-const respostas={"serviços":"Oferecemos Websites Inteligentes, Sistemas Digitais e SaaS.","preço":"O preço depende do tipo de projeto. Fale conosco no WhatsApp para orçamento.","portfolio":"Nosso portfólio está em desenvolvimento.","whatsapp":"Fale conosco aqui: https://wa.me/244925146189","website":"Criamos websites profissionais para empresas.","sistema":"Criamos sistemas digitais personalizados."};
-function getReply(msg){msg=msg.toLowerCase();for(let key in respostas){if(msg.includes(key)) return respostas[key];}return "Posso ajudar com serviços, preço ou contato.";}
-function sendMessage(){const input=document.getElementById("userMessage");const msg=input.value.trim();if(msg==="")return;const chat=document.getElementById("chatbot-messages");const user=document.createElement("div");user.textContent="Você: "+msg;chat.appendChild(user);const bot=document.createElement("div");bot.textContent="Ovandu: "+getReply(msg);chat.appendChild(bot);chat.scrollTop=chat.scrollHeight;input.value="";}
-
-// ===== Painel Admin =====
 let membros = [];
 let entregas = [];
 
-function adicionarMembro() {
-    const nome = document.getElementById('novoMembro').value.trim();
-    if(!nome) return alert('Digite um nome válido');
-    membros.push(nome);
-    atualizarListaMembros();
-    document.getElementById('novoMembro').value='';
+// ===== Membros =====
+async function carregarMembros() {
+  const res = await fetch(`${API_URL}/membros`);
+  const data = await res.json();
+  membros = data.map(m=>m.nome);
+  atualizarListaMembros();
+}
+
+async function adicionarMembro() {
+  const nome = document.getElementById('novoMembro').value.trim();
+  if(!nome) return alert('Digite um nome válido');
+
+  await fetch(`${API_URL}/membros`, {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({ nome })
+  });
+
+  document.getElementById('novoMembro').value='';
+  carregarMembros();
 }
 
 function atualizarListaMembros() {
-    const lista = document.getElementById('listaMembros');
-    lista.innerHTML='';
-    const select = document.getElementById('membro');
-    select.innerHTML='<option value="">Selecione</option>';
-    membros.forEach((m,index)=>{
-        const li = document.createElement('li');
-        li.textContent = m + ' ';
-        const btn = document.createElement('button');
-        btn.textContent='Remover';
-        btn.onclick=()=>{ membros.splice(index,1); atualizarListaMembros(); };
-        li.appendChild(btn);
-        lista.appendChild(li);
+  const lista = document.getElementById('listaMembros');
+  const select = document.getElementById('membro');
+  lista.innerHTML = '';
+  select.innerHTML = '<option value="">Selecione</option>';
 
-        const option = document.createElement('option');
-        option.value=m;
-        option.textContent=m;
-        select.appendChild(option);
-    });
+  membros.forEach((m,index)=>{
+    const li = document.createElement('li');
+    li.textContent = m + ' ';
+    const btn = document.createElement('button');
+    btn.textContent='Remover';
+    btn.onclick=()=>{
+      membros.splice(index,1);
+      carregarMembros();
+    };
+    li.appendChild(btn);
+    lista.appendChild(li);
+
+    const option = document.createElement('option');
+    option.value=m;
+    option.textContent=m;
+    select.appendChild(option);
+  });
 }
 
-function registrarEntrega() {
-    const cliente = document.getElementById('cliente').value.trim();
-    const sistema = document.getElementById('sistema').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const membro = document.getElementById('membro').value;
-    const arquivoInput = document.getElementById('arquivoSistema');
-    if(!cliente||!sistema||!email||!membro||!arquivoInput.files[0]) return alert('Preencha todos os campos');
+// ===== Entregas =====
+async function carregarEntregas() {
+  const res = await fetch(`${API_URL}/entregas`);
+  entregas = await res.json();
+  atualizarTabela();
+}
 
-    const arquivo = arquivoInput.files[0];
-    const arquivoURL = URL.createObjectURL(arquivo); 
-    const entrega = {cliente,sistema,email,membro,status:'Pendente',arquivo:arquivoURL,nomeArquivo:arquivo.name};
-    entregas.push(entrega);
-    atualizarTabela();
+async function registrarEntrega() {
+  const cliente = document.getElementById('cliente').value.trim();
+  const sistema = document.getElementById('sistema').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const telefone = document.getElementById('telefone').value.trim();
+  const membro = document.getElementById('membro').value;
+  const arquivoInput = document.getElementById('arquivoSistema');
 
-    document.getElementById('cliente').value='';
-    document.getElementById('sistema').value='';
-    document.getElementById('email').value='';
-    document.getElementById('membro').value='';
-    arquivoInput.value='';
+  if(!cliente || !sistema || !email || !telefone || !membro || !arquivoInput.files[0])
+    return alert('Preencha todos os campos');
+
+  const formData = new FormData();
+  formData.append("cliente", cliente);
+  formData.append("sistema", sistema);
+  formData.append("email", email);
+  formData.append("telefone", telefone);
+  formData.append("membro", membro);
+  formData.append("arquivo", arquivoInput.files[0]);
+
+  await fetch(`${API_URL}/entregas`, { method: "POST", body: formData });
+
+  document.getElementById('cliente').value='';
+  document.getElementById('sistema').value='';
+  document.getElementById('email').value='';
+  document.getElementById('telefone').value='';
+  document.getElementById('membro').value='';
+  arquivoInput.value='';
+
+  carregarEntregas();
 }
 
 function atualizarTabela(){
-    const tbody = document.getElementById('tabelaSistemas').querySelector('tbody');
-    tbody.innerHTML='';
-    entregas.forEach((e,index)=>{
-        const tr = document.createElement('tr');
-        tr.innerHTML=`
-            <td>${e.cliente}</td>
-            <td>${e.sistema}</td>
-            <td><a href="${e.arquivo}" download="${e.nomeArquivo}">${e.nomeArquivo}</a></td>
-            <td>${e.email}</td>
-            <td>${e.membro}</td>
-            <td>${e.status}</td>
-            <td>
-                <button onclick="marcarConcluido(${index})">Concluir</button>
-                <button onclick="enviarWhatsApp(${index})">WhatsApp</button>
-                <button onclick="enviarEmail(${index})">Email</button>
-            </td>
-        `;
-        tbody.appendChild(tr);
-    });
+  const tbody = document.getElementById('tabelaSistemas').querySelector('tbody');
+  tbody.innerHTML='';
+  entregas.forEach((e,index)=>{
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${e.cliente}</td>
+      <td>${e.sistema}</td>
+      <td><a href="${e.arquivo}" download="${e.nomeArquivo}">${e.nomeArquivo}</a></td>
+      <td>${e.email}</td>
+      <td>${e.telefone}</td>
+      <td>${e.membro}</td>
+      <td>${e.status}</td>
+      <td>
+        <button onclick="marcarConcluido(${index})">Concluir</button>
+        <button onclick="enviarWhatsApp(${index})">WhatsApp</button>
+        <button onclick="enviarEmail(${index})">Email</button>
+      </td>
+    `;
+    tbody.appendChild(tr);
+  });
 }
 
-function marcarConcluido(index){entregas[index].status='Concluído';atualizarTabela();}
-function enviarWhatsApp(index){
-    const e = entregas[index];
-    const msg = encodeURIComponent(`Olá ${e.cliente}, seu sistema "${e.sistema}" está pronto. Baixe aqui: ${e.arquivo}`);
-    window.open(`https://wa.me/${e.email.replace(/[^0-9]/g,'')}?text=${msg}`,'_blank');
+// Marcar como concluído
+async function marcarConcluido(index) {
+  const e = entregas[index];
+  await fetch(`${API_URL}/entregas/${e.id}`, {
+    method: "PATCH",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({ status: "Concluído" })
+  });
+  carregarEntregas();
 }
+
+// Enviar WhatsApp
+function enviarWhatsApp(index){
+  const e = entregas[index];
+  const msg = encodeURIComponent(`Olá ${e.cliente}, seu sistema "${e.sistema}" está pronto. Baixe aqui: ${e.arquivo}`);
+  const numero = e.telefone ? e.telefone : MEU_NUMERO;
+  window.open(`https://wa.me/${numero}?text=${msg}`,'_blank');
+}
+
+// Enviar Email
 function enviarEmail(index){
-    const e = entregas[index];
-    const assunto = encodeURIComponent(`Entrega do Sistema "${e.sistema}"`);
-    const corpo = encodeURIComponent(`Olá ${e.cliente},\n\nSeu sistema "${e.sistema}" foi entregue com sucesso pelo membro ${e.membro}.\nVocê pode baixar o arquivo aqui: ${e.arquivo}\n\nAtenciosamente,\nOvandu Systems`);
-    window.open(`mailto:${e.email}?subject=${assunto}&body=${corpo}`,'_blank');
+  const e = entregas[index];
+  const assunto = encodeURIComponent(`Entrega do Sistema "${e.sistema}"`);
+  const corpo = encodeURIComponent(`Olá ${e.cliente},\n\nSeu sistema "${e.sistema}" foi entregue com sucesso pelo membro ${e.membro}.\nVocê pode baixar o arquivo aqui: ${e.arquivo}\n\nAtenciosamente,\nOvandu Systems`);
+  const email = e.email ? e.email : MEU_EMAIL;
+  window.open(`mailto:${email}?subject=${assunto}&body=${corpo}`,'_blank');
+}
+
+// Ao carregar a página
+window.onload = () => {
+  carregarMembros();
+  carregarEntregas();
 }
 </script>
-
-<footer>
-© 2026 Ovandu Systems — Todos os direitos reservados
-</footer>
 
 </body>
 </html>

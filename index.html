@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ovandu Systems</title>
+<link rel="icon" type="image/png" href="ovanja.png">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <style>
   body {font-family: 'Poppins', sans-serif; margin:0; padding:0; scroll-behavior: smooth;}
@@ -19,21 +20,21 @@
   section {padding:60px 20px; text-align:center;}
   h2 {margin-bottom:40px; color:#0F172A;}
   .services, .portfolio {display:flex; justify-content:center; gap:40px; flex-wrap:wrap;}
-  .card {background:#f4f4f4; padding:25px; border-radius:12px; width:280px; transition:0.3s; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
-  .card:hover {transform: translateY(-5px); box-shadow:0 5px 15px rgba(0,0,0,0.2);}
+  .card {background:#f4f4f4; padding:25px; border-radius:12px; width:280px; transition:0.4s; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+  .card:hover {transform: translateY(-10px) scale(1.03); box-shadow:0 8px 20px rgba(0,0,0,0.2);}
   footer {background:#0F172A; color:white; padding:30px 20px; text-align:center;}
   input, textarea, select {width:100%; padding:12px; margin:8px 0; border-radius:6px; border:1px solid #ccc; font-size:1em;}
   button.submit {background:#22C55E; color:#0F172A; padding:12px 20px; border:none; border-radius:6px; font-weight:bold; cursor:pointer; transition:0.3s;}
   button.submit:hover {background:#16A34A;}
   
   /* WhatsApp Chat Bot */
-  .whatsapp {position:fixed; bottom:90px; right:20px; width:60px; cursor:pointer; z-index:1000; transition:0.3s;}
+  .whatsapp {position:fixed; bottom:20px; right:20px; width:60px; cursor:pointer; z-index:1000; transition:0.3s;}
   .whatsapp:hover {transform: scale(1.1);}
 
   /* Chatbot Box */
-  #chatbot {position:fixed; bottom:20px; right:20px; width:300px; max-width:90%; background:#f4f4f4; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.3); display:flex; flex-direction:column; z-index:1000;}
+  #chatbot {position:fixed; bottom:90px; right:20px; width:300px; max-width:90%; background:#f4f4f4; border-radius:10px; box-shadow:0 5px 20px rgba(0,0,0,0.3); display:flex; flex-direction:column; z-index:1000;}
   #chatbot-header {background:#22C55E; color:#0F172A; padding:10px; border-radius:10px 10px 0 0; font-weight:bold; display:flex; justify-content:space-between; cursor:pointer;}
-  #chatbot-messages {padding:10px; height:200px; overflow-y:auto; font-size:0.9em;}
+  #chatbot-messages {padding:10px; height:250px; overflow-y:auto; font-size:0.9em;}
   #chatbot-input {display:flex; border-top:1px solid #ccc;}
   #chatbot-input input {flex:1; padding:10px; border:none;}
   #chatbot-input button {background:#22C55E; color:#0F172A; border:none; padding:10px; cursor:pointer; font-weight:bold;}
@@ -57,7 +58,7 @@
 <section class="hero" id="home">
   <h1>Ovandu Systems</h1>
   <p>Tecnologia para o crescimento das empresas</p>
-  <button onclick="document.getElementById('pedido').scrollIntoView();">Solicitar Serviço</button>
+  <button onclick="document.getElementById('pedido').scrollIntoView({behavior:'smooth'});">Solicitar Serviço</button>
 </section>
 
 <!-- Services Section -->
@@ -92,7 +93,7 @@
 <!-- Pedido Section -->
 <section id="pedido">
   <h2>Solicitar Serviço</h2>
-  <form action="mailto:avindodossantos@gmail.com" method="post" enctype="text/plain">
+  <form id="pedidoForm">
     <input type="text" placeholder="Nome" name="Nome" required>
     <input type="text" placeholder="Empresa" name="Empresa">
     <select name="Servico" required>
@@ -148,8 +149,6 @@ function sendMessage(){
   messages.appendChild(userDiv);
 
   let botReply = '';
-
-  // Regras melhoradas para perguntas naturais
   if(/como.*empresa|como.*funciona/i.test(msg)){
     botReply = 'A Ovandu Systems desenvolve websites e sistemas digitais para empresas. Você pode solicitar um serviço ou ver nossos serviços acima!';
   } else if(/quais.*serviços|o que.*oferecem/i.test(msg)){
@@ -170,6 +169,13 @@ function sendMessage(){
   messages.scrollTop = messages.scrollHeight;
   input.value='';
 }
+
+// Feedback de envio de pedido
+document.getElementById('pedidoForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  alert('Obrigado! Seu pedido foi enviado com sucesso. Entraremos em contato em breve.');
+  this.reset();
+});
 </script>
 
 <footer>

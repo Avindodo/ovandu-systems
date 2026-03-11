@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-  
+
   <!-- Página inicial -->
   <url>
     <loc>https://avindodo.github.io/ovandu-systems/</loc>
@@ -31,6 +31,38 @@
     <lastmod>2026-03-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- WhatsApp (Contato rápido) -->
+  <url>
+    <loc>https://wa.me/244925146189</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Chatbot (Página de ajuda interativa) -->
+  <url>
+    <loc>https://avindodo.github.io/ovandu-systems/#chatbot</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Espaço para futuros links do Portfólio -->
+  <url>
+    <loc>https://avindodo.github.io/ovandu-systems/#portfolio</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Espaço para futuros links de Pedidos/Serviços -->
+  <url>
+    <loc>https://avindodo.github.io/ovandu-systems/#pedido</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
